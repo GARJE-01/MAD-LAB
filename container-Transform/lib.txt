@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(home: ContainerTransformExample()));
+}
+
+class ContainerTransformExample extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          color: Colors.brown,
+          child: Transform.rotate(
+            angle: 0.1,
+            child: Text('Container with transform'),
+          ),
+        ),
+      ),
+    );
+  }
+}
